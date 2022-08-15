@@ -1,8 +1,8 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
+*, html {
     margin: 0;
-}
+    padding: 0;
+    box-sizing: border-box;
+}  
 
 body {
     background-color: gray;
@@ -16,6 +16,13 @@ header {
     display: block;
 }
 
+.red {
+    display: flex;
+    justify-content: start;
+    margin: -1px;
+    border-radius: 125px;
+}
+
 header h1 {
     display: inline-block;
     font-size: 48px;
@@ -26,9 +33,17 @@ nav {
     background-color: orange;
     display: flex-end;
     padding: 13px;
-    color: black;
-    height: fit-content;
     font-size: 20px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: orange;
+    background-color: gray;
+    transition: ease 300ms;
 }
 
 h3 {
@@ -39,7 +54,8 @@ h3 {
     position: relative;
     float: right;
     right: 50px;
-    bottom: 70px;
+    bottom: 150px;
+    border: 3px solid black;
 }
 
 article {
@@ -48,23 +64,35 @@ article {
     padding: 20px;
 }
 
-article h1 {
+h3,
+nav,
+article h1,
+section h1,
+footer h1 {
     background-color: orange;
-    
+    padding: 8px;
+    border-radius: 11px;
 }
 
-p {
-    flex-wrap: wrap;
+article p {
     text-align: center;
     background-color: lightgray;
+    border-radius: 11px;
+    margin-left: 350px;
 }
 
-article img {
-    max-width: 100px;
-    padding: 20px 10px;
-    margin: auto;
+img {
+    max-width: 450px;
     border: 20px 10px 10px 10px solid black;
     display: flex;
+    border-radius: 11px;
+    margin-left: 600px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: ease 300ms;
+
 }
 
 section {
@@ -73,33 +101,41 @@ section {
 
 }
 
-section h1 {
-    background-color: orange;
-}
-
 footer {
     padding: 20px;
     background-color: orange;
-    text-align: start;
-    margin-top: auto;
-    bottom: 0;
     width: 100%;
-    height: 9rem;
-    height: 130px;
-    display: flex;
+    height: 11rem;
+    bottom: 0;
+    position: fixed;
 }
 
-.resize {
-    width: 400px;
-    height: auto;
-}
-
-.resize {
-    width: 300px;
-    height: auto;
-}
-
-ol, ul {
-    display: flex-end;
+ul {
     list-style: none;
+    text-align: center;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 11px;
+    margin-left: 600PX;
+    margin-right: 600PX;
+}
+
+@media screen and (max-height: 800px) {
+    footer {
+        height: 0%;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
   }
+  
+  @media screen and (max-width: 612px) {
+    .card {
+      width: 100%;
+    }
+  }
+  
