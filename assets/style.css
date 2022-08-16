@@ -58,7 +58,7 @@ h3 {
     border: 3px solid black;
 }
 
-article {
+section {
     display: flex;
     text-align: start;
     padding: 20px;
@@ -66,15 +66,16 @@ article {
 
 h3,
 nav,
-article h1,
+section h1,
 section h1,
 footer h1 {
     background-color: orange;
     padding: 8px;
     border-radius: 11px;
+    text-align: center;
 }
 
-article p {
+section p {
     text-align: center;
     background-color: lightgray;
     border-radius: 11px;
@@ -82,17 +83,29 @@ article p {
 }
 
 img {
-    max-width: 450px;
+    max-width: 500px;
     border: 20px 10px 10px 10px solid black;
     display: flex;
     border-radius: 11px;
     margin-left: 600px;
 }
 
+#work img {
+    width: 100%;
+}
+
 img:hover {
     transform: scale(1.1);
     transition: ease 300ms;
     background-color: 5px black;
+}
+
+.other {
+    width: 50%;
+}
+
+article {
+    width: 50%;
 }
 
 section {
@@ -103,8 +116,9 @@ section {
 
 .other {
     max-width: 450px;
-    display: flex;
+    display: flexbox;
     margin-left: 75px;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -112,8 +126,8 @@ footer {
     background-color: orange;
     width: 100%;
     height: 3rem;
-    bottom: 0;
-    position: fixed;
+    bottom: 30;
+    position: sticky;
 }
 
 ul {
@@ -126,22 +140,23 @@ ul {
     margin-right: 600PX;
 }
 
-@media screen and (max-height: 800px) {
-    footer {
-        height: 0%;
+.contact-me {
+   
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        margin-left: 10px;
+    }
+
+    article {
+        width: 100%;
     }
     
 }
 
 @media screen and (max-width: 992px) {
     .card {
-      width: 50%;
+      width: 20%;
     }
   }
-  
-  @media screen and (max-width: 612px) {
-    .card {
-      width: 100%;
-    }
-  }
-  
